@@ -8,6 +8,7 @@ namespace csharp_library.Models
     public string Location { get; set; }
     public string Name { get; set; }
     private List<Book> Books { get; set; }
+    private List<Book> CheckedOut { get; set; }
 
 
     public void PrintBooks()
@@ -29,6 +30,17 @@ namespace csharp_library.Models
       Books.AddRange(books);
     }
 
+    public Book CheckedOut()
+    {
+
+    }
+
+    private Book ValidateBook(string selection, List<Book> bookList)
+    {
+      int bookIndex = 0;
+      bool valid = Int32.TryParse(selection, out bookIndex);
+    }
+
 
 
     public Library(string location, string name)
@@ -36,6 +48,7 @@ namespace csharp_library.Models
       Location = location;
       Name = name;
       Books = new List<Book>();
+      CheckedOut = new List<Book>();
     }
   }
 }

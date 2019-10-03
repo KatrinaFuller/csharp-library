@@ -7,7 +7,6 @@ namespace csharp_library
   {
     static void Main(string[] args)
     {
-
       Console.WriteLine("Welcome to the Boise Library! \n");
       Console.WriteLine("--- Available Books ---");
 
@@ -25,6 +24,9 @@ namespace csharp_library
       myLibrary.PrintBooks();
 
       Console.WriteLine("\n Select a book number to checkout (Q)uit, or (R)eturn a book");
+
+      string selection = Console.ReadLine();
+      myLibrary.Checkout(selection);
     }
   }
 }
